@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Photo Vote &mdash; Admin</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="frame"></span> Photo Vote</div>
+    <nav><a href="index.html">View voting page</a></nav>
+  </header>
+
+  <div id="gateView" class="gate">
+    <h1>Admin sign in</h1>
+    <p>Enter the admin password to manage the photo pool.</p>
+    <div class="field">
+      <label for="passwordInput">Password</label>
+      <input type="password" id="passwordInput" placeholder="Password" />
+    </div>
+    <div class="error-text" id="gateError"></div>
+    <button class="btn" id="gateSubmit">Sign in</button>
+  </div>
+
+  <div id="adminView" class="admin-wrap" style="display:none;">
+    <div class="admin-header">
+      <h1>Photo pool</h1>
+      <div style="display:flex; gap:10px;">
+        <button class="btn secondary" id="exportBtn">Export CSV</button>
+        <button class="btn secondary" id="signOutBtn">Sign out</button>
+      </div>
+    </div>
+
+    <div class="dropzone" id="dropzone">
+      <p>Drag photos here, or</p>
+      <label class="btn" for="fileInput">Choose photos</label>
+      <input type="file" id="fileInput" accept="image/*" multiple />
+      <div class="upload-status" id="uploadStatus"></div>
+    </div>
+
+    <div class="section-title">Photos in pool <span id="photoCount"></span></div>
+    <div class="image-grid" id="imageGrid"></div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
