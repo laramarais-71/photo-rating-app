@@ -1,0 +1,10 @@
+{
+  "name": "photo-rating-app",
+  "version": "1.0.0",
+  "description": "A photo voting app with an admin upload panel, 1-10 rating scale, and CSV export, built for Netlify.",
+  "main": "index.js",
+  "license": "ISC",
+  "dependencies": {
+    "@netlify/blobs": "^11.0.2"
+  }
+}
